@@ -170,7 +170,7 @@ for epoch_i in range(args.end_epoch-args.distil_epoch + 1, args.end_epoch + 1):
     avg_L_sd = np.array(Lsd_list).mean()
     avg_gradMAE = np.array(gradMAE_list).mean()
 
-    output_data = "[%02d/%02d] L_sr: %.4f, gradMAE: %.4f \n" % (epoch_i, args.end_epoch, avg_L_sd, avg_gradMAE)
+    output_data = "[%02d/%02d] L_sd: %.4f, gradMAE: %.4f \n" % (epoch_i, args.end_epoch, avg_L_sd, avg_gradMAE)
     print(output_data)
     output_file = open(log_file_name, 'a')
     output_file.write(output_data)
